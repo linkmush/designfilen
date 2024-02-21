@@ -4,27 +4,55 @@
 
         .albert-img-text {
             display: flex;
-            background-color: black;
+            background-color: rgb(21, 21, 44);
             border-radius: 10px;
             margin-top: 85px;
 
-            img {
-                width: 100%;
-                height: auto;
+            .albert-pic {
                 border-radius: 10px;
+                display: none;
+
+                @include xl {
+                    display: block;
+                }
             }
     
             .albert-text {
-                padding-top: 80px;
-                padding-left: 150px;
-                padding-right: 130px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 100px;
+                padding-right: 30px;
+
+                @media (max-width: 762px) {
+                    padding-left: 50px;
+                    padding-right: 20px;
+                }
+
+                @media (max-width: 1200px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
 
                 p {
                     color: $gray-500;
+
+                    @media (max-width: 602px) {
+                        @include text-xs;
+                        color: $gray-500;
+                    }
                 }
 
                 h2 {
                     color: #ffff;
+
+                    @media (max-width: 602px) {
+                        @include text-lead;
+                        color: #ffff;
+                    }
 
                 }
 
@@ -35,6 +63,7 @@
                     .btn-theme-s {
                         box-shadow: 0 4px 8px rgba(163, 4, 4, 0.1);
                         background-color: red;
+
 
                         &:hover {
                             text-decoration: none;
