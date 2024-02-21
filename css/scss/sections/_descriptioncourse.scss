@@ -7,6 +7,11 @@
             justify-content: space-between;
             margin-top: 80px;
 
+            @media(max-width: 1200px) {
+                display: flex;
+                flex-direction: column;
+            }  
+
             .singlecourse-header {
 
                 p {
@@ -44,6 +49,14 @@
                 padding-bottom: 30px;
                 height: 100%;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                @media(max-width: 1200px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 20px;
+                } 
 
                 .course-include {
                     display: flex;
